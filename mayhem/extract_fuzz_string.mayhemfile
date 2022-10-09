@@ -1,0 +1,4 @@
+project: Istio
+target: extract_fuzz_string
+cmds:
+- cmd: /out/extract_fuzz_string
