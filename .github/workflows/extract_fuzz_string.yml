@@ -48,6 +48,7 @@ jobs:
         mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
         args: --image ${{ steps.meta.outputs.tags }} --cmd /out/fuzz_attacker_tcp
           --target fuzz_attacker_tcp --file mayhem/fuzz_attacker_tcp.mayhemfile
+          --duration 650
         sarif-output: sarif
     - name: Upload SARIF file(s)
       uses: github/codeql-action/upload-sarif@v2
