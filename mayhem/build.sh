@@ -17,4 +17,4 @@
 
 # This could use a lot more fuzzers. It's on my back-log.
 # This could also use a seed corpus.
-compile_go_fuzzer github.com/tsenart/vegeta/v12/lib extractFuzzString extract_fuzz_string gofuzz
+compile_go_fuzzer github.com/tsenart/vegeta/v12/lib FuzzAttackerTCP fuzz_attacker_tcp gofuzz

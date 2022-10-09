@@ -1,4 +1,4 @@
 project: Istio
-target: extract_fuzz_string
+target: fuzz_attacker_tcp
 cmds:
-- cmd: /out/extract_fuzz_string
+- cmd: /out/fuzz_attacker_tcp

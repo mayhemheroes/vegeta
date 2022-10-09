@@ -46,8 +46,8 @@ jobs:
       uses: forallsecure/mcode-action@v1
       with:
         mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-        args: --image ${{ steps.meta.outputs.tags }} --cmd /out/extract_fuzz_string
-          --target extract_fuzz_string --file mayhem/extract_fuzz_string.mayhemfile
+        args: --image ${{ steps.meta.outputs.tags }} --cmd /out/fuzz_attacker_tcp
+          --target fuzz_attacker_tcp --file mayhem/fuzz_attacker_tcp.mayhemfile
         sarif-output: sarif
     - name: Upload SARIF file(s)
       uses: github/codeql-action/upload-sarif@v2
