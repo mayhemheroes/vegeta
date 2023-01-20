@@ -1,4 +1,4 @@
-project: Istio
+project: vegeta
 target: fuzz_attacker_tcp
 cmds:
 - cmd: /out/fuzz_attacker_tcp
