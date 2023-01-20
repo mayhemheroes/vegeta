@@ -15,7 +15,7 @@
 ################################################################################
 
 # Pull the oss-fuzz base image
-FROM gcr.io/oss-fuzz-base/base-builder-go
+FROM gcr.io/oss-fuzz-base/base-builder-go AS builder
 
 # Push the code into the container
 COPY . vegeta
@@ -32,3 +32,9 @@ WORKDIR $SRC/vegeta
 # Setup the environment & compile the program
 ENV FUZZING_LANGUAGE=go SANITIZER=address
 RUN compile
+
+# Create a new container
+FROM ubuntu:latest AS package
+
+# Copy the compiled fuzzers from the builder container
+COPY --from=builder /out/ /out/
