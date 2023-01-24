@@ -1,0 +1,4 @@
+project: vegeta
+target: fuzz-attacker-tcp
+cmds:
+- cmd: /out/fuzz_attacker_tcp
